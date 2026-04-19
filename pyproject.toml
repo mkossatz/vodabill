@@ -1,0 +1,24 @@
+[project]
+name = "vodabill"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Max Kossatz",email = "max@kossatzonline.de"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "playwright (>=1.58.0,<2.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "click (>=8.3.2,<9.0.0)"
+]
+
+[project.scripts]
+vodabill = "vodabill.cli:cli"
+
+[tool.poetry]
+packages = [{include = "vodabill", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
